@@ -12,7 +12,7 @@ public abstract class Filter {
 
     public abstract List<File> filter(File file) throws Exception;
 
-    public List<File> pass(File file) {
+    protected List<File> pass(File file) {
         LinkedList<File> singleFile = new LinkedList<>();
         singleFile.add(file);
 
