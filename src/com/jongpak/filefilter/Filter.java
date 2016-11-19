@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 public abstract class Filter {
     protected HashMap<String, Consumer<Object>> options = new HashMap<>();
 
-    public abstract List<File> filter(File files) throws Exception;
+    public abstract List<File> filter(File file) throws Exception;
 
     public List<File> pass(File file) {
         LinkedList<File> singleFile = new LinkedList<>();
