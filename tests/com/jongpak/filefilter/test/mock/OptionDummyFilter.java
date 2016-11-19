@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.jongpak.filefilter.Filter;
 
-public class FilterOptionMock extends Filter {
+public class OptionDummyFilter extends Filter {
     private String matchString;
 
-    public FilterOptionMock() {
+    public OptionDummyFilter() {
         addOptionHandler("match", string -> matchString = (String) string);
     }
 
