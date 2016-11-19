@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.function.Consumer;
 
 public abstract class Filter {
-    protected HashMap<String, Consumer<Object>> options = new HashMap<>();
+    private HashMap<String, Consumer<Object>> options = new HashMap<>();
 
     public abstract List<File> filter(File file) throws Exception;
 
@@ -27,6 +27,10 @@ public abstract class Filter {
         options.get(key).accept(value);
 
         return this;
+    }
+
+    protected void addOptionHandler(String key, Consumer<Object> handler) {
+        options.put(key, handler);
     }
 
     public Set<String> getOptions() {
