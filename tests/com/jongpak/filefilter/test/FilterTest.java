@@ -8,7 +8,7 @@ import java.io.File;
 import org.junit.Test;
 
 import com.jongpak.filefilter.Filter;
-import com.jongpak.filefilter.test.mock.OptionDummyFilter;
+import com.jongpak.filefilter.test.mock.MatchFilter;
 import com.jongpak.filefilter.test.mock.PassFilter;
 
 public class FilterTest {
@@ -24,7 +24,7 @@ public class FilterTest {
 
     @Test
     public void testOptionMethod() throws Exception {
-        Filter filter = new OptionDummyFilter();
+        Filter filter = new MatchFilter();
         File file = new File("pass.txt");
 
         filter.option("match", "pass.txt");
@@ -37,13 +37,13 @@ public class FilterTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testOptionMethodWithIllegalOption() throws Exception {
-        Filter filter = new OptionDummyFilter();
+        Filter filter = new MatchFilter();
         filter.option("noOptionKey", null);
     }
 
     @Test
     public void testGetOptionMethod() {
-        Filter filter = new OptionDummyFilter();
+        Filter filter = new MatchFilter();
         assertEquals(1, filter.getOptions().size());
         assertTrue(((String) filter.getOptions().toArray()[0]).equals("match"));
     }
