@@ -25,11 +25,11 @@ public class PipelineRunnerTest {
         pipeline.put(new MatchFilter().option("match", "test1.txt"));
         pipeline.put(new DupFilter().option("dest", filtered));
 
-        runner.run(new File(this.getClass().getResource("sample_files/test1.txt").toString()));
+        runner.run(new File(this.getClass().getResource("sample_files/test1.txt").getPath()));
         assertEquals(1, filtered.size());
 
         filtered.clear();
-        runner.run(new File(this.getClass().getResource("sample_files/test2.txt").toString()));
+        runner.run(new File(this.getClass().getResource("sample_files/test2.txt").getPath()));
         assertEquals(0, filtered.size());
     }
 
