@@ -22,7 +22,7 @@ public class PipelineRunner {
                 List<File> localFilteredFiles = filter.filter(file);
 
                 if (localFilteredFiles != null) {
-                    filteredFiles.addAll(filter.filter(file));
+                    filteredFiles.addAll(localFilteredFiles);
                 }
             }
 
