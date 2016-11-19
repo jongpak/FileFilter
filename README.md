@@ -1,2 +1,2 @@
 # FileFilter
-FileFilter is a simple and useful file filtering and operation library
+FileFilter is a simple library of file filtering and operation
