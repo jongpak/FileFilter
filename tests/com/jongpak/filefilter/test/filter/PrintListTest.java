@@ -14,16 +14,26 @@ import com.jongpak.filefilter.filters.PrintList;
 
 public class PrintListTest {
     @Test
-    public void test() throws Exception {
+    public void testFile() throws Exception {
         OutputStream stream = new ByteArrayOutputStream();
         PrintStream out = new PrintStream(stream);
 
-        Filter filter = new PrintList();
+        Filter filter = new PrintList().option("out", out);
         File file = new File(this.getClass().getResource("../sample_files/test1.txt").getPath());
 
-        filter.option("out", out);
         filter.filter(file);
-
         assertEquals(file.getPath() + System.lineSeparator(), stream.toString());
+    }
+
+    @Test
+    public void testDirectory() throws Exception {
+        OutputStream stream = new ByteArrayOutputStream();
+        PrintStream out = new PrintStream(stream);
+
+        Filter filter = new PrintList().option("out", out);
+        File file = new File(this.getClass().getResource("../sample_files").getPath());
+
+        filter.filter(file);
+        assertEquals(file.getPath() + File.separator + System.lineSeparator(), stream.toString());
     }
 }
