@@ -9,7 +9,7 @@ import org.junit.Test;
 import com.jongpak.filefilter.Filter;
 import com.jongpak.filefilter.filters.SelectRegexName;
 
-public class PickRegexNameTest {
+public class SelectRegexNameTest {
     @Test
     public void test() throws Exception {
         Filter filter = new SelectRegexName();

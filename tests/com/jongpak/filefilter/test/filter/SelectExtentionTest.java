@@ -9,7 +9,7 @@ import org.junit.Test;
 import com.jongpak.filefilter.Filter;
 import com.jongpak.filefilter.filters.SelectExtention;
 
-public class PickExtentionTest {
+public class SelectExtentionTest {
     @Test
     public void test() throws Exception {
         Filter filter = new SelectExtention();
