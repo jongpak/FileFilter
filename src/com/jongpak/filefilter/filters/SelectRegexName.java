@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 
 import com.jongpak.filefilter.Filter;
 
-public class PickRegexName extends Filter {
+public class SelectRegexName extends Filter {
     private String regex;
 
-    public PickRegexName() {
+    public SelectRegexName() {
         addOptionHandler("regex", regex -> this.regex = (String) regex);
     }
 

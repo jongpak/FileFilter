@@ -6,10 +6,10 @@ import java.util.List;
 
 import com.jongpak.filefilter.Filter;
 
-public class PickExtention extends Filter {
+public class SelectExtention extends Filter {
     protected HashSet<String> extentions = new HashSet<>();
 
-    public PickExtention() {
+    public SelectExtention() {
         addOptionHandler("extention", extention -> extentions.add(((String) extention).toLowerCase()));
     }
 
