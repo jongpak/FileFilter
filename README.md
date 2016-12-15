@@ -8,7 +8,7 @@ Pipeline pipeline = new Pipeline();
 PipelineRunner runner = new PipelineRunner(pipeline);
 
 pipeline.put(new ChildFiles().option("recursive", true));
-pipeline.put(new PickExtention().option("txt"));
+pipeline.put(new SelectExtention().option("txt"));
 pipeline.put(new PrintList());
 
 try {
