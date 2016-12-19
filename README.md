@@ -17,3 +17,19 @@ try {
     e.printStackTrace();
 }
 ```
+
+
+## List of filters
+### Selection
+- SelectExtention
+- SelectRegexName
+
+### Exclusion
+- ExcludeExtention
+
+### Exploration
+- ChildFiles
+
+### Process
+- CopyFiles
+- PrintList
